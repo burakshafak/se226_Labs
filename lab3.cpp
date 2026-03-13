@@ -1,4 +1,5 @@
 #include <iostream>
+#include <utility>
 using namespace std;
 
 
@@ -6,6 +7,19 @@ void swapValues(int* p1, int* p2) {
     int temp = *p1;
     *p1 = *p2;
     *p2 = temp;
+}
+void reverseArray(int* arr, int size) {
+    int start = 0;
+    int end = size - 1;
+
+    while (start < end) {
+        // Swap the elements at the start and end positions
+        std::swap(arr[start], arr[end]);
+
+        // Move the pointers toward the center
+        start++;
+        end--;
+    }
 }
 
 
@@ -65,6 +79,8 @@ int main() {
     cout << "Array elements:" << endl;
     printArray(arr, size);
 
+
+
     cout << "Sum of elements: " << findSum(arr, size) << endl;
 
     cout << "----------------------------------" << endl;
@@ -82,6 +98,12 @@ int main() {
     cout << "After swap" << endl;
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
+
+    cout << "---------------" << endl;
+    cout << "Reversed array:" << endl;
+
+    reverseArray(arr,size);
+    printArray(arr, size);
 
     cout << "---------------" << endl;
 
