@@ -13,10 +13,10 @@ void reverseArray(int* arr, int size) {
     int end = size - 1;
 
     while (start < end) {
-        // Swap the elements at the start and end positions
+    
         std::swap(arr[start], arr[end]);
 
-        // Move the pointers toward the center
+        /
         start++;
         end--;
     }
@@ -40,15 +40,7 @@ int findSum(int* arr, int size) {
 }
 
 
-void shiftRight(int* arr, int size) {
-    int last = arr[size - 1];
 
-    for (int i = size - 1; i > 0; i--) {
-        arr[i] = arr[i - 1];
-    }
-
-    arr[0] = last;
-}
 
 
 int* createArray(int size) {
@@ -107,14 +99,7 @@ int main() {
 
     cout << "---------------" << endl;
 
-    cout << "Shifting array to the right" << endl;
-
-    shiftRight(arr, size);
-
-    cout << "Array after shiftRight:" << endl;
-    printArray(arr, size);
-
-    cout << "------------------" << endl;
+    
 
     cout << "Deleting array" << endl;
 
